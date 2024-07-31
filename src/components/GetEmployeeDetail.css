@@ -1,0 +1,40 @@
+.loader {
+    text-align: center;
+    font-size:x-large;
+}
+.employee-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    height: fit-content;
+}
+
+.employee-card-header {
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+.employee-card-header h2 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.employee-card-body h3 {
+    margin: 10px 0 5px;
+    font-size: 18px;
+    color: #333;
+}
+
+.employee-card-body p {
+    margin: 5px 0;
+    color: #555;
+}
+
+.employee-card-body p strong {
+    color: #333;
+}

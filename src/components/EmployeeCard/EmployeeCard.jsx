@@ -1,5 +1,6 @@
 import React from "react";
 import "./EmployeeCard.css";
+import { Link } from "react-router-dom";
 
 const EmployeeCard = ({name,id}) => {
   return (
@@ -13,12 +14,10 @@ const EmployeeCard = ({name,id}) => {
         </p>
       </div>
       <div className="button-group">
-        <button className="show-details-button" >
+        <Link to={`/${id}`} className="show-details-button">
           Show Details
-        </button>
-        <button className="delete-button">
-          Delete
-        </button>
+        </Link>
+        <button className="delete-button">Delete</button>
       </div>
     </div>
   );
