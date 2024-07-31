@@ -2,6 +2,7 @@ import React from "react";
 import "./EmployeeCard.css";
 import { Link } from "react-router-dom";
 
+
 const EmployeeCard = ({name,id}) => {
   return (
     <div className="employee-card">
@@ -17,7 +18,6 @@ const EmployeeCard = ({name,id}) => {
         <Link to={`/${id}`} className="show-details-button">
           Show Details
         </Link>
-        <button className="delete-button">Delete</button>
       </div>
     </div>
   );

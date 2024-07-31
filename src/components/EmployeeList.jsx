@@ -22,7 +22,7 @@ const EmployeeList = () => {
         console.log(error);
       }
     }
-    // fetchData();
+    fetchData();
   }, []);
   // console.log(employee[0]);
   return (
