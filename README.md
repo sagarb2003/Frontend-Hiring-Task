@@ -28,7 +28,7 @@ Install the project dependencies using npm:
 npm install
 ```
 
-### 6. Create your account in CosmoCloud to get the following ID's
+### 5. Create your account in CosmoCloud to get the following ID's
 For more details about Cosmocloud, visit their website: [Cosmocloud](https://cosmocloud.io/)
 
 ```bash
@@ -36,7 +36,7 @@ VITE_PROJECT_ID
 VITE_ENVIRONMENT_ID
 ```
 
-### 5. Run the Development Server
+### 6. Run the Development Server
 Start the development server with:
 
 ```bash
