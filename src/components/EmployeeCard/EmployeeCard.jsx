@@ -1,15 +1,15 @@
 import React from "react";
 import "./EmployeeCard.css";
 
-const EmployeeCard = () => {
+const EmployeeCard = ({name,id}) => {
   return (
     <div className="employee-card">
       <div className="employee-details">
         <p>
-          <strong>Name:</strong> Sagar
+          <strong>Name:</strong> {name}
         </p>
         <p>
-          <strong>Employee ID:</strong> 12345
+          <strong>Employee ID:</strong> {id}
         </p>
       </div>
       <div className="button-group">

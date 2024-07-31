@@ -1,9 +1,9 @@
 import axios from "axios";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import EmployeeCard from "./EmployeeCard/EmployeeCard";
-import EmployeeForm from "./EmployeeForm";
 
 const EmployeeList = () => {
+  const [employee, setEmployee] = useState([]);
   useEffect(() => {
     async function fetchData() {
       try {
@@ -16,17 +16,20 @@ const EmployeeList = () => {
             },
           }
         );
-        // console.log(response.data.data[0]);
+        // console.log(response.data.data);
+        setEmployee(response.data.data);
       } catch (error) {
         console.log(error);
       }
     }
     // fetchData();
   }, []);
+  // console.log(employee[0]);
   return (
     <div>
-      <EmployeeCard />
-      <EmployeeForm />
+      {employee.map((data) => {
+        return <EmployeeCard key={data._id} name={data.name} id={data._id} />;
+      })}
     </div>
   );
 };

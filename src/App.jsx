@@ -1,13 +1,19 @@
-import { useState } from "react";
-import "./App.css";
 import EmployeeList from "./components/EmployeeList";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import EmployeeForm from "./components/EmployeeForm";
 
 function App() {
-
   return (
-    <>
-      {/* <EmployeeList /> */}
-    </>
+    <BrowserRouter>
+      <div className="App">
+        <h1>React Router</h1>
+        //navbar
+        <Routes>
+          <Route path="/" element={<EmployeeList />} exact />
+          <Route path="/create" element={<EmployeeForm />} />
+        </Routes>
+      </div>
+    </BrowserRouter>
   );
 }
 
