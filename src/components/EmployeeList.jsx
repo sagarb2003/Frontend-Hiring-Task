@@ -10,8 +10,8 @@ const EmployeeList = () => {
         "https://free-ap-south-1.cosmocloud.io/development/api/employee?limit=10&offset=0",
         {
           headers: {
-            projectId: "66a9e7cf39e2fdc09bbb9f5d",
-            environmentId: "66a9e7cf39e2fdc09bbb9f5e",
+            projectId: import.meta.env.VITE_PROJECT_ID,
+            environmentId: import.meta.env.VITE_ENVIRONMENT_ID,
           },
         }
       );
@@ -27,8 +27,8 @@ const EmployeeList = () => {
         `https://free-ap-south-1.cosmocloud.io/development/api/employee/${id}`,
         {
           headers: {
-            projectId: "66a9e7cf39e2fdc09bbb9f5d",
-            environmentId: "66a9e7cf39e2fdc09bbb9f5e",
+            projectId: import.meta.env.VITE_PROJECT_ID,
+            environmentId: import.meta.env.VITE_ENVIRONMENT_ID,
           },
           data: {},
         }
@@ -41,7 +41,7 @@ const EmployeeList = () => {
   };
 
   useEffect(() => {
-    // fetchEmployees();
+    fetchEmployees();
   }, []);
   return (
     <div>
