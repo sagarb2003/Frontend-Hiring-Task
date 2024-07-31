@@ -2,13 +2,13 @@ import EmployeeList from "./components/EmployeeList";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import EmployeeForm from "./components/EmployeeForm";
 import GetEmployeeDetail from "./components/GetEmployeeDetail";
+import Navbar from "./components/Navbar/Navbar";
 
 function App() {
   return (
     <BrowserRouter>
       <div className="App">
-        <h1>React Router</h1>
-        {/* //navbar */}
+        <Navbar/>
         <Routes>
           <Route path="/" element={<EmployeeList />} exact />
           <Route path="/create" element={<EmployeeForm />} />

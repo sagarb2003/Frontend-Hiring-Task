@@ -5,7 +5,7 @@ import './GetEmployeeDetail.css'
 
 const GetEmployeeDetail = () => {
   const { id } = useParams();
-  const [employee, setEmployee] = useState(null); // Initialize as null
+  const [employee, setEmployee] = useState(null); 
 
   useEffect(() => {
     async function fetchData() {
@@ -25,7 +25,7 @@ const GetEmployeeDetail = () => {
       }
     }
 
-    // fetchData();
+    fetchData();
   }, [id]);
 
   if (!employee) {

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./EmployeeForm.css";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 const EmployeeForm = () => {
   const [name, setName] = useState("");
@@ -11,6 +12,7 @@ const EmployeeForm = () => {
   const [zipCode, setZipCode] = useState("");
   const [contactMethod, setContactMethod] = useState("");
   const [value, setValue] = useState("");
+  const navigate=useNavigate();
 
   const submitHandler = async (e) => {
     e.preventDefault();
@@ -42,7 +44,11 @@ const EmployeeForm = () => {
             },
           }
         );
-        console.log("Employee Created SuccessFully",response);
+        alert("Employee Created Successfully");
+        setTimeout(() => {
+          navigate("/");
+        }, 3000);
+        // console.log("Employee Created SuccessFully",response);
     } catch (error) {
         console.log("Error Occurred",error)
     }
