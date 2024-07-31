@@ -3,7 +3,7 @@ import "./EmployeeCard.css";
 import { Link } from "react-router-dom";
 
 
-const EmployeeCard = ({name,id}) => {
+const EmployeeCard = ({name,id,deleteHandler}) => {
   return (
     <div className="employee-card">
       <div className="employee-details">
@@ -18,6 +18,9 @@ const EmployeeCard = ({name,id}) => {
         <Link to={`/${id}`} className="show-details-button">
           Show Details
         </Link>
+        <button className="delete-button" onClick={deleteHandler}>
+          Delete
+        </button>
       </div>
     </div>
   );

@@ -1,3 +1,8 @@
+.no-employee{
+    text-align: center;
+    font-size: x-large;
+    font-weight: bolder;
+}
 .employee-card {
     width: 260px;
     height: 120px;
@@ -23,7 +28,7 @@
     justify-content: space-between;
 }
 
-.show-details-button{
+.show-details-button,.delete-button{
     border: none;
     border-radius: 4px;
     text-decoration: none;
@@ -41,4 +46,11 @@
 .show-details-button:hover {
     background-color: #42a5f5;
 }
+.delete-button {
+    background-color: #e57373;
+    color: white;
+}
 
+.delete-button:hover {
+    background-color: #f44336;
+}
